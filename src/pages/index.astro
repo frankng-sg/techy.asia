@@ -9,7 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
-import { SOCIALS } from "@config";
+import { SOCIALS, RSS } from "@config";
 
 const posts = await getCollection("blog");
 
@@ -23,8 +23,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1 class="mr-2">Mingalaba</h1>
-      <a
+      <h1 class="mr-2">Dev Diary</h1>
+      { RSS.enable && <a
         target="_blank"
         href="/rss.xml"
         class="rss-link"
@@ -38,28 +38,22 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
           ></path><circle cx="6" cy="18" r="2"></circle>
         </svg>
-      </a>
+      </a>}
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p>
-        Read the blog posts or check
-        <LinkButton
-          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+        Greetings, fellow enthusiasts of the digital era! In the fast-paced realm of
+        technology, where digitalization is the driving force behind transformative
+        changes, I find myself utterly amazed at the profound impact it has on making
+        our lives easier and more convenient. For those who are considering to venture
+        into this wonderful field, I am thrilled to share my learning journey with
+        <LinkButton href="https://www.42singapore.sg/">42 Singapore</LinkButton>,
+        an innovative coding school that is free and open to all.
       </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
           <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
+            <div class="social-links">Let's connect:</div>
             <Socials />
           </div>
         )
