@@ -9,7 +9,7 @@ tags:
   - How-To
   - 42Singapore
   - Exam
-description: How to prepare 42Singapore Exam
+description: A simple guide that provides an efficient approach to tackle exam questions
 ---
 
 Assessment through examinations remains a crucial benchmark for gauging learners' comprehension of a subject. In the examination setting, individuals are tasked with solving problems within a limited timeframe and without assistance. [42Singapore](https://www.42singapore.sg/) places significant emphasis on examinations, presenting challenging questions to assess participants' abilities thoroughly. As a result, adequate preparation is crucial.
@@ -36,6 +36,7 @@ Remembering implementation details is like trying to draw a bird by remember ![]
 Instead, you just need to remember ![](@assets/bird-outline.png)
 
 Let me elaborate further by using one of the examination question.
+
 ```text
 Assignment name  : last_word
 Expected files   : last_word.c
@@ -65,6 +66,7 @@ $>
 ```
 
 How do you approach to solve this question? A student straight away told me that he would first check if number of params was one, then he would work on the spaces/tabs. Then he struggled to continue. In his mind, I think he was trying to remember this.
+
 ```C
 #include <unistd.h>
 
@@ -94,6 +96,7 @@ int		main(int argc, char **argv)
 	return (0);
 }
 ```
+
 It is not easy to capture the required steps to solve the problem, isn't it? How about describing the solution in English?
 
 **Step 1**
@@ -123,43 +126,43 @@ Working out the approach with a pen and paper.
 
 Given:
 
-| index | 0 1 2 3 4 5 6 7 8 9 |
-| --- | --- |
-| str   | _ _ a b c _ x y z _ |
+| index | 0 1 2 3 4 5 6 7 8 9   |
+| ----- | --------------------- |
+| str   | \_ _ a b c _ x y z \_ |
 
 Algorithm:
 
-*Remember, wordStart = 0 initially*
+_Remember, wordStart = 0 initially_
 
-| i | str[i - 1] | str[i] | New Word? | wordStart |
-| --- | --- | --- | --- | --- |
-| 1 | _ | _ | No | 0 |
-| 2 | _ | a | Yes | 2 |
-| 3 | a | b | No | 2 |
-| 4 | b | c | No | 2 |
-| 5 | c | _ | No | 2 |
-| 6 | _ | x | Yes | 6 |
-| 7 | x | y | No | 6 |
-| 8 | y | z | No | 6 |
-| 9 | z | _ | No | 6 |
+| i   | str[i - 1] | str[i] | New Word? | wordStart |
+| --- | ---------- | ------ | --------- | --------- |
+| 1   | \_         | \_     | No        | 0         |
+| 2   | \_         | a      | Yes       | 2         |
+| 3   | a          | b      | No        | 2         |
+| 4   | b          | c      | No        | 2         |
+| 5   | c          | \_     | No        | 2         |
+| 6   | \_         | x      | Yes       | 6         |
+| 7   | x          | y      | No        | 6         |
+| 8   | y          | z      | No        | 6         |
+| 9   | z          | \_     | No        | 6         |
 
 So, it is correct. Lets try another example,
 
 Given:
 
-| index | 0 1 2 3 |
-| --- | --- |
-| str   | a b c _ |
+| index | 0 1 2 3  |
+| ----- | -------- |
+| str   | a b c \_ |
 
 Algorithm:
 
-*Remember, wordStart = 0 initially*
+_Remember, wordStart = 0 initially_
 
-| i | str[i - 1] | str[i] | New Word? | wordStart |
-| --- | --- | --- | --- | --- |
-| 1 | a | b | No | 0 |
-| 2 | b | c | No | 0 |
-| 3 | c | _ | No | 0 |
+| i   | str[i - 1] | str[i] | New Word? | wordStart |
+| --- | ---------- | ------ | --------- | --------- |
+| 1   | a          | b      | No        | 0         |
+| 2   | b          | c      | No        | 0         |
+| 3   | c          | \_     | No        | 0         |
 
 So, it is correct again.
 
@@ -185,22 +188,26 @@ Open the `Exam Simulator` by typing `exam` in your terminal
 - Once inside the exam computer, open a terminal and run `examshell` and log in using your account user & pass
 
 - To quickly build and test your program, you should set alias at the beginning of the examination
+
 ```bash
 alias build='cc -g -std=c99 -Wall -Wextra -Werror'
 alias debug='gdb -tui --args'
 ```
 
 To build a `.c` file
+
 ```bash
 build main.c
 ```
 
 To debug executable file without command line arguments
+
 ```bash
 debug a.out
 ```
 
 To debug executable file including command line arguments
+
 ```bash
 debug a.out param1 param2
 ```
