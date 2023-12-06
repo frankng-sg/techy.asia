@@ -20,16 +20,21 @@ Developers frequently employ Sequence Diagrams to depict the interactions among 
 
 ## How to implement by code
 
-Code:
+**Code**:
 
 ```
 @startuml
 Employee -> LoginService: login(userName, userPass)
 LoginService -> AuthService: request_access(userName, userPass)
-AuthService -> LoginService: request is rejected
-LoginService -> Employee: fail to login
+AuthService --> LoginService: request is rejected
+LoginService --> Employee: fail to login
 @enduml
 ```
 
-Generate Diagram:
+**Remark**: <br />
+-> is solid line arrow that represents a request <br />
+
+\- \-> is dashed line arrow that represents a response <br />
+
+**Generate Diagram**: <br />
 Copy above code into this [PlantUML Web Server](http://www.plantuml.com/plantuml/uml/) and click `Submit`
