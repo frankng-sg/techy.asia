@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://techy.asia/", // replace this with your deployed domain
   author: "Frank Nguyen",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "Frank Nguyen",
-  ogImage: "astropaper-og.jpg",
+  desc: "Follow me on my journey to become a software developer.",
+  title: "Techy Asia",
+  ogImage: "",
   lightAndDarkMode: true,
   postPerPage: 10,
 };
