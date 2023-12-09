@@ -1,5 +1,5 @@
 ---
-title: How to prepare 42Singapore Exam
+title: 42Singapore - How To Prepare For Exam
 author: Frank Nguyen
 pubDatetime: 2023-12-01T20:00:00+08:00
 postSlug: how-to-prepare-42singapore-exam
@@ -11,6 +11,8 @@ tags:
   - Exam
 description: A simple guide that provides an efficient approach to tackle exam questions
 ---
+
+![Paper Background](@assets/paper-background.jpg)
 
 Assessment through examinations remains a crucial benchmark for gauging learners' comprehension of a subject. In the examination setting, individuals are tasked with solving problems within a limited timeframe and without assistance. [42Singapore](https://www.42singapore.sg/) places significant emphasis on examinations, presenting challenging questions to assess participants' abilities thoroughly. As a result, adequate preparation is crucial.
 
