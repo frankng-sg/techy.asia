@@ -8,7 +8,7 @@ draft: false
 tags:
   - how-to
   - 42singapore
-description: A simple guide to draw complex Sequence Diagram by coding
+description: A guide to solve the pipex problem from 42 Singapore programme
 ---
 
 ![Pipeline In Desert](@assets/pipeline-desert.jpg)
