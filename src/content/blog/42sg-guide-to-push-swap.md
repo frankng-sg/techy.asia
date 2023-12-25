@@ -23,7 +23,7 @@ Traditional sorting algorithms operate on arrays that allow to swap any two numb
 
 ## Sort a stack of 2 numbers
 
-This requires at most 1 operation. If the first element is greater than the second element, you can swap the first two numbers. Otherwise, you don't need to do anything.
+This requires at most 1 operation. If the first number is greater than the second, you can swap the two numbers.
 
 ## Sort a stack of 3 numbers
 
@@ -40,6 +40,15 @@ This requires at most 2 operations. Let us look at all possible cases:
 - 2 0 1: rotate the list
 
 - 2 1 0: swap the first two numbers + then reverse rotate the list
+
+Since the input space is very small, you can just map input to output. For example,
+
+if input is 0 1 2, then return <br/>
+if input is 0 2 1, then print "sa" "ra" <br/>
+if input is 1 0 2, then print "sa" <br/>
+if input is 1 2 0, then print "rra" <br/>
+if input is 2 0 1, then print "ra" <br/>
+if input is 2 1 0, then print "sa" "rra" <br/>
 
 ## Sort a stack of 4 numbers
 There are 24 combinations of 4 numbers so you may feel lazy to precompute solutions for all possible cases. With the help of an additional stack, you can sort a stack of 4 numbers with at most 7 moves. Here is how it works:
