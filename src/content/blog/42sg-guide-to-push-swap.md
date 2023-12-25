@@ -183,3 +183,5 @@ The radix sort algorithm is simple to implement and its performance is reasonabl
 ## Testing your algorithm
 
 I understand that you are eager to benchmark your algorithms with other students so I wrote [Push Swap Checker](https://github.com/frankng-sg/42singapore/tree/main/cursus/push_swap_checker) just for that. I hope you enjoy push_swapping!
+
+![Push Swap Checker Preview](@assets/push_swap_checker.gif)
